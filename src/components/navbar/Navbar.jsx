@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Link } from 'react-router-dom'
 import { BsFillCloudSunFill } from 'react-icons/bs'
 import { FiSun } from 'react-icons/fi'
-import myContext from '../../context/data/myContext'
+import myContext from '../../context/data/MyContext'
 import { RxCross2 } from 'react-icons/rx'
 
 export default function Navbar() {
