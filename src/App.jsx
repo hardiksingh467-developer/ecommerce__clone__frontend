@@ -29,7 +29,6 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/productinfo/:id" element={<ProductInfo />} />
-        <Route path="/cart" element={<Cart />} />
         <Route path="/addproduct" element={<ProtectedRouteForAdmin><AddProduct /></ProtectedRouteForAdmin>} />
         <Route path="/updateproduct" element={<ProtectedRouteForAdmin><UpdateProduct /></ProtectedRouteForAdmin>} />
         <Route path="/*" element={<NoPage />} />
@@ -52,13 +51,19 @@ export const ProtectedRoute = ({ children }) => {
   }
 }
 
-export const ProtectedRouteForAdmin = ({children}) => {
-  const admin = JSON.parse(localStorage.getItem('user'))
-  console.log(admin.user.email)
-  if (admin.user.email === 'knupadhyay784@gmail.com') {
-    return children
+export const ProtectedRouteForAdmin = ({ children }) => {
+  const userData = localStorage.getItem('user');
+  let admin = null;
+
+  try {
+    admin = JSON.parse(userData);
+  } catch (error) {
+    console.error("Invalid user JSON in localStorage:", error);
   }
-  else {
-    return <Navigate to='/login' />
+
+  if (admin?.user?.email === 'hardiksingh467@gmail.com') {
+    return children;
+  } else {
+    return <Navigate to="/login" />;
   }
-}
+};
