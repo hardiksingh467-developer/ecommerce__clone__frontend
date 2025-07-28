@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import myContext from '../../context/data/myContext';
+import myContext from '../../context/data/MyContext';
 import { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
-import { auth } from '../../firebase/firebaseConfig';
+import { auth } from '../../firebase/FirebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import Loader from '../../components/loader/Loader';
 

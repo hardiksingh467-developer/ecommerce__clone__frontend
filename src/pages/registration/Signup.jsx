@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'
-import myContext from '../../context/data/myContext';
+import myContext from '../../context/data/MyContext';
 import { toast } from 'react-toastify';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth, fireDB } from '../../firebase/FirebaseConfig';
