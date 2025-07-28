@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import MyContext from "./MyContext.jsx";
 import { addDoc, collection, doc, onSnapshot, orderBy, query, QuerySnapshot, setDoc, Timestamp } from 'firebase/firestore';
 import { toast } from 'react-toastify';
-import { fireDB } from '../../firebase/firebaseConfig.jsx';
+import { fireDB } from '../../firebase/FirebaseConfig.jsx';
 
 // *3. Define Props
 const MyState = (props) => {
