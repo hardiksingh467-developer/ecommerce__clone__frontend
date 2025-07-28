@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Order from './pages/order/Order';
 import Cart from './pages/cart/Cart';
 import Dashboard from './pages/admin/dashboard/Dashboard';
